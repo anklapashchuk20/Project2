@@ -1,0 +1,65 @@
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+   TABLE {
+    width: 1100px; 
+    border-collapse: collapse; 
+   }
+   TD {
+    padding: 1.5px; 
+    border: 1px solid black; 
+   }
+
+  </style>
+</head>
+<body>
+<h1>Books</h1>
+<table>
+<tr>
+  
+    <td>
+      <p>Rating</p> 
+    </td>
+    <td>
+      <p>Title</p>
+    </td>
+    <td>
+      <p>Author</p>
+    </td>
+    <td>
+      <p>Vendor</p>
+    </td>
+     <td>
+      <p>Price </p>
+    </td>
+     <td>
+      <p>Description</p>
+    </td>
+</tr>  
+<% @articles.each do |article| %>
+<tr>
+    <td>
+      <%= article.rating %><p>&nbsp;</p>
+    </td>
+    <td>
+	      <%= link_to article.title, article %><p>&nbsp;</p>
+   
+    </td>
+    <td>
+      <%= article.author %><p>&nbsp;</p>
+    </td>
+    <td>
+      <%= article.vendor %><p>&nbsp;</p>
+    </td>
+     <td>
+      <%= article.price %><p>&nbsp;</p>
+    </td>
+     <td>
+      <%= article.description %><p>&nbsp;</p>
+    </td>
+</tr>
+  <% end %>
+
+</table>
+</body>
+<%= link_to "New Book", new_article_path %>

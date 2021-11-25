@@ -1,0 +1,15 @@
+
+<h1><%= @article.title %></h1>
+
+      <p><%= @article.rating %></p>
+      <p><%= @article.author %></p>
+      <p><%= @article.vendor %></p>
+      <p><%= @article.price %></p>
+      <p><%= @article.description %></p>
+      <ul>
+  
+ <li><%= link_to "Destroy", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+ 
